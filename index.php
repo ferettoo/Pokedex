@@ -1,3 +1,7 @@
+<?php
+require("./php_librarys/function.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,18 +14,15 @@
 
 <body>
     <?php
+        foreach ($pokedex[0] as $key => $value) {
+            echo $key. " = " . "$value" . "<br/>";
+            foreach ($pokedex[0]["type"] as $key => $value) {
+                echo $value . "<br>";
+            }
+            
+        }
 
-    $pokemon = array(
-        "number" =>  $number,
-        "name" => $name,
-        "region" => $region,
-        "type" => $type,
-        "height" => $height,
-        "weight" => $weight,
-        "evolution" => $evolution,
-        "image" => $image
-    );
-
+        //showPokemon($pokedex,001);
     ?>
 </body>
 
