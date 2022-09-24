@@ -14,6 +14,7 @@ require("./php_librarys/function.php");
 
 <body>
     <?php
+    /** 
         foreach ($pokedex[0] as $key => $value) {
             echo $key. " = " . "$value" . "<br/>";
             foreach ($pokedex[0]["type"] as $key => $value) {
@@ -22,7 +23,22 @@ require("./php_librarys/function.php");
             
         }
 
-        //showPokemon($pokedex,001);
+        for ($i = 0; $i < count($pokedex); $i++) {
+        foreach ($pokedex[$i] as $key => $value) {
+            if (array_keys($pokedex[$i], ["type"])) {
+            }
+            echo $key . " = " . "$value" . "<br/>";
+        }
+    }
+     */
+
+    foreach ($pokedex as $type => $value) {
+        echo $value;
+    }
+
+
+    //https://www.php.net/manual/en/function.key.php
+    //showPokemon($pokedex,001);
     ?>
 </body>
 
