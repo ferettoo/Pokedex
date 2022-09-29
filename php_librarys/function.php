@@ -60,7 +60,7 @@ function insertPokemon(&$pokedex, $pokemon)
     array_push($pokedex, $pokemon);
 }
 
-        */
+function showPokemon($pokemon)
 {
     $type = ""; // Creamos esta variable para poder mostrar los tipos.
 
@@ -89,6 +89,19 @@ function showPokedex($pokedex)
 
 function pokemonByNumber($pokedex, $numPokemon)
 {
+    $i = 0;
+    $stop = false;
+
+    while ($i < count($pokedex) && !$stop) {
+        if ($pokedex[$i]["number"] == $numPokemon) {
+            $stop = true;
+            $position = $i;
+        } else {
+            $position = -1;
+        }
+        $i++;
+    }
+    return $position;
 }
 
 function deletePokemon($pokedex, $numPokemon)

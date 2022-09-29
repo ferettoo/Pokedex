@@ -15,7 +15,7 @@ require("./php_librarys/function.php");
 <body>
     <?php
     //showPokedex($pokedex);
-    pokemonByNumber($pokedex, 0);
+    echo pokemonByNumber($pokedex, 001);
     ?>
 </body>
 
