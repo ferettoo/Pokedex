@@ -108,6 +108,6 @@ function deletePokemon($pokedex, $numPokemon)
 {
 }
 
-function modifyPokemon()
+function modifyPokemon($pokedex, $number, $name, $region, $type, $height, $width, $evolution, $image)
 {
 }
