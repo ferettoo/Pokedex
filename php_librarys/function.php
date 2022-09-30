@@ -1,41 +1,6 @@
 
 <?php
 
-
-
-$pokedex = array(
-    [
-        "number" => "001",
-        "name" => "Bulbasaur",
-        "region" => "Kanto",
-        "type" => ["Plant", "Poison"],
-        "height" => "70",
-        "width" => "6.9",
-        "evolution" => "Unevolved",
-        "image" => "media/001.png"
-    ],
-    [
-        "number" => "002",
-        "name" => "Ivysaur",
-        "region" => "Hoen",
-        "type" => ["Plant", "Poison"],
-        "height" => "100",
-        "width" => "13",
-        "evolution" => "First evolution",
-        "image" => "media/002.png"
-    ],
-    [
-        "number" => "003",
-        "name" => "Charmander",
-        "region" => "Jotho",
-        "type" => ["Fire"],
-        "height" => "60",
-        "width" => "8.5",
-        "evolution" => "Unvolved",
-        "image" => "media/004.png"
-    ]
-);
-
 /**
  * Utilizamos las variables para poder crear un nuevo pokemon,
  * añadiendole informacion en otra funcion.
@@ -87,13 +52,13 @@ function showPokedex($pokedex)
     }
 }
 
-function pokemonByNumber($pokedex, $numPokemon)
+function searchPokemon($pokedex, $infoPokemon)
 {
     $i = 0;
     $stop = false;
 
     while ($i < count($pokedex) && !$stop) {
-        if ($pokedex[$i]["number"] == $numPokemon) {
+        if ($pokedex[$i]["number"] == $infoPokemon) {
             $stop = true;
             $position = $i;
         } else {
@@ -104,10 +69,25 @@ function pokemonByNumber($pokedex, $numPokemon)
     return $position;
 }
 
-function deletePokemon($pokedex, $numPokemon)
+function deletePokemon(&$pokedex, $numPokemon)
 {
+    $positionDelete = searchPokemon($pokedex, $numPokemon);
+
+    if ($positionDelete != -1) {
+        array_splice($pokedex, $positionDelete, 1);
+    } else {
+        echo "Pokemon not found";
+    }
 }
 
-function modifyPokemon($pokedex, $number, $name, $region, $type, $height, $width, $evolution, $image)
+function modifyPokemon(&$pokedex, $number, $name, $region, $type, $height, $width, $evolution, $image)
 {
+    $position = searchPokemon($pokedex, $number);
+
+    if ($position != -1) {
+        $pokemon = createPokemon($number, $name, $region, $type, $height, $width, $evolution, $image);
+        $pokedex[$position] = $pokemon;
+    } else {
+        echo "Pokemon doesn't exist.";
+    }
 }
