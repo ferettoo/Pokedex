@@ -22,7 +22,15 @@ function createPokemon($number, $name, $region, $type, $height, $width, $evoluti
 
 function insertPokemon(&$pokedex, $pokemon)
 {
-    array_push($pokedex, $pokemon);
+    $pokemonNumber = $pokemon["number"];
+
+    $existPokemon = searchPokemon($pokedex, $pokemonNumber);
+
+    if ($existPokemon == -1) {
+        array_push($pokedex, $pokemon);
+    } else {
+        echo 'The pokemon ' . $pokemonNumber . ' alredy exist.' . '<br>';
+    }
 }
 
 function showPokemon($pokemon)
@@ -50,21 +58,36 @@ function showPokedex($pokedex)
     for ($i = 0; $i < count($pokedex); $i++) {
         showPokemon($pokedex[$i]);
     }
+
+    // $i = 0;
+    // $type = "";
+
+    // foreach ($pokedex[$i] as $key => $value) {
+
+    //     if ($key != "type") {
+    //         echo $key . ' = ' . $value . '<br>';
+    //     } else {
+    //         for ($x = 0; $x < count($i["type"]); $x++) {
+    //             $type .= $i["type"][$x] . " ";
+    //         }
+    //         echo $key . " = " . $type . '<br>';
+    //     }
+    // }
 }
 
 function searchPokemon($pokedex, $infoPokemon)
 {
     $i = 0;
     $stop = false;
+    $position = -1;
 
     while ($i < count($pokedex) && !$stop) {
         if ($pokedex[$i]["number"] == $infoPokemon) {
             $stop = true;
             $position = $i;
         } else {
-            $position = -1;
+            $i++;
         }
-        $i++;
     }
     return $position;
 }
