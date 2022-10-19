@@ -11,14 +11,18 @@
 <body>
     <form action="" method="POST">
         <label for="number">Número</label>
-        <input type="text" size="3">
+        <input type="text" maxlength="3" autofocus placeholder="Number of pokemon">
         <br>
         <label for="name">Name</label>
-        <input type="text">
+        <input type="text" placeholder="Name of pokemon">
         <br>
         <label for="region">Region</label>
         <select name="region" id="pokemonRegion">
             <option value="kanto">Kanto</option>
+            <option value="jotho">Jotho</option>
+            <option value="hoenn">Hoenn</option>
+            <option value="sinnoh">Sinnoh</option>
+            <option value="teselia">Teselia</option>
         </select>
         <br>
         <label for="type">Type</label>
@@ -42,10 +46,10 @@
         <label for="psychic">Psychic</label>
         <br>
         <label for="height">Height</label>
-        <input type="number">
+        <input type="number" min="1">
         <br>
         <label for="weight">Weight</label>
-        <input type="number">
+        <input type="number" min="0" step="0.01">
         <br>
         <label for="evolution">Evolution</label>
         <input type="radio" id="No evolution" name="evolution">
@@ -56,7 +60,7 @@
         <label for="Other evolutions">Other evolutions</label>
         <br>
         <label for="image">Image</label>
-
+        <input type="file">
         <br>
         <input type="submit" value="Accept">
         <a href="">Cancel</a>
