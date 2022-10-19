@@ -1,0 +1,9 @@
+body {
+    background-image: url(../media/pokedex.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imageNav {
+    height: 30px;
+}

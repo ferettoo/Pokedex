@@ -27,7 +27,7 @@
                                 Master Data
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="php_views/pokemon_list.php">Pokemons</a></li>
+                                <li><a class="dropdown-item" href="pokemon_list.php">Pokemons</a></li>
                                 <!-- <hr class="dropdown-divider"> -->
                             </ul>
                         </li>
