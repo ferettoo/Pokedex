@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/style.css">
-
+    <script src="https://kit.fontawesome.com/8bd77272c3.js" crossorigin="anonymous"></script>
     <title>Pokemon List</title>
 </head>
 
@@ -15,46 +15,36 @@
     <?php include_once('../php_partials/menu.php'); ?>
     <div class="container-fluid">
 
+
         <div class="row row-cols-1 row-cols-md-5  g-4 my-1">
             <div class="col">
                 <div class="card h-100 border border-secondary">
                     <img src="../media/001.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">001-Bulbasaur</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <span class="badge text-bg-warning">Planta</span>
+                        <span class="badge text-bg-warning">Veneno</span>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 border border-secondary">
-                    <img src="../media/002.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">002-Ivysaur</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 border border-secondary">
-                    <img src="../media/003.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">003-Venusaur</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+
+                        <form action="" class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-outline-danger me-1">
+                                <i class=" fa-regular fa-trash-can"></i>
+                                <input id=" hiddenInput" name="hiddenInput" type="hidden" value="hiddInput">
+                            </button>
+                            <button type="submit" class="btn btn-outline-primary"><i class=" fa-regular fa-pen-to-square"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
 
         </div>
 
+        <div class="d-flex justify-content-end" style="z-index: 100;">
+            <a class="btn btn-mi btn-warning sticky-bottom" href=" pokemon.php" style="border-radius:100% ;">
+                <img src="../media/plus.svg" class="d-flex justify-content-center" alt="plusButton" height="30px" width="20px">
+            </a>
+        </div>
     </div>
 </body>
 <script src=" ../bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
