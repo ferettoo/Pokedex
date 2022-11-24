@@ -13,9 +13,7 @@
 
 <body>
     <?php include_once('../php_partials/menu.php'); ?>
-    <div class="container-fluid">
-
-
+    <div class="container-fluid ">
         <div class="row row-cols-1 row-cols-md-5  g-4 my-1">
             <div class="col">
                 <div class="card h-100 border border-secondary">
@@ -29,8 +27,8 @@
 
                         <form action="" class="d-flex justify-content-end">
                             <button type="submit" class="btn btn-outline-danger me-1">
-                                <i class=" fa-regular fa-trash-can"></i>
-                                <input id=" hiddenInput" name="hiddenInput" type="hidden" value="hiddInput">
+                                <i class="fa-regular fa-trash-can"></i>
+                                <input id="hiddenInput" name="hiddenInput" type="hidden" value="hiddnInput">
                             </button>
                             <button type="submit" class="btn btn-outline-primary"><i class=" fa-regular fa-pen-to-square"></i></button>
                         </form>

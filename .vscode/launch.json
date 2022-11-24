@@ -5,17 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:8080/pokedex/index.php",
-      "webRoot": "${workspaceFolder}"
-    },
-    {
       "name": "Listen for Xdebug 2 (Legacy)",
       "type": "php",
       "request": "launch",
       "port": 9000
+    },
+    {
+      "type": "edge",
+      "request": "launch",
+      "name": "Launch Edge",
+      "url": "http://localhost:8080/pokedex/testFunctions.php",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
