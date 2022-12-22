@@ -22,7 +22,7 @@ require("./php_librarys/function.php");
      */
     $pokemon1 = createPokemon("001", "Bulbasaur", "Kanto", ["Plant", "Poison"], "70", "6.9", "Unvolved", "media/001.png",);
     $pokemon2 = createPokemon("002", "Ivysaur", "Hoen", ["Plant", "Poison"], "100", "13", "First evolution", "media/002.png",);
-    $pokemon3 = createPokemon("002", "Charmander", "Jotho", ["Fire"], "60", "8.5", "Unvolved", "media/004.png",);
+    $pokemon3 = createPokemon("003", "Charmander", "Jotho", ["Fire"], "60", "8.5", "Unvolved", "media/004.png",);
     /**
      * INSERT POKEMON
      */

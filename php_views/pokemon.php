@@ -21,7 +21,7 @@
 
             <div class="card-body">
                 <!-- Formulario -->
-                <form action="../php_librarys/function.php" method="POST">
+                <form action="../php_controllers/pokemonController.php" enctype="multipart/form-data" method="POST">
                     <div class="row mb-2">
                         <label for="number" class="col-3 col-form-label" name="numberPokemon">Number</label>
                         <div class="col-9">
@@ -129,7 +129,7 @@
                     <div class="row mb-2">
                         <label for="image" class="col-3 col-form-label" name="imagePokemon">Image</label>
                         <div class="col-9">
-                            <input type="file" name="imageForm">
+                            <input type="file" name="imageForm" id="imageForm">
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">

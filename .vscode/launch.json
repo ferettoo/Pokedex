@@ -11,10 +11,12 @@
       "port": 9000
     },
     {
-      "type": "edge",
+      "name": "Launch Chrome",
       "request": "launch",
-      "name": "Launch Edge",
-      "url": "http://localhost:8080/pokedex/testFunctions.php",
+      "type": "chrome",
+      "url": "http://localhost:8888/pokedex/index.php",
+      // "url": "http://localhost:8888/pokedex/testFunctions.php",
+      // "url": "http://localhost:8888/pokedex/php_controllers/pokemonController.php",
       "webRoot": "${workspaceFolder}"
     }
   ]
