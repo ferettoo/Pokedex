@@ -18,17 +18,17 @@ require("./php_librarys/function.php");
     $pokedex = array();
 
     /**
-     * CREATE POKEDEX
+     * CREATE POKEDEX | INSERT POKEMON
      */
-    $pokemon1 = createPokemon("001", "Bulbasaur", "Kanto", ["Plant", "Poison"], "70", "6.9", "Unvolved", "media/001.png",);
-    $pokemon2 = createPokemon("002", "Ivysaur", "Hoen", ["Plant", "Poison"], "100", "13", "First evolution", "media/002.png",);
-    $pokemon3 = createPokemon("003", "Charmander", "Jotho", ["Fire"], "60", "8.5", "Unvolved", "media/004.png",);
-    /**
-     * INSERT POKEMON
-     */
-    insertPokemon($pokedex, $pokemon1);
-    insertPokemon($pokedex, $pokemon2);
-    insertPokemon($pokedex, $pokemon3);
+    $pokemon = createPokemon("001", "Bulbasaur", "Kanto", ["Plant", "Poison"], "70", "6.9", "Unvolved", "media/001.png",);
+    insertPokemon($pokedex, $pokemon);
+
+    $pokemon = createPokemon("002", "Ivysaur", "Hoen", ["Plant", "Poison"], "100", "13", "First evolution", "media/002.png",);
+    insertPokemon($pokedex, $pokemon);
+
+    $pokemon = createPokemon("003", "Charmander", "Jotho", ["Fire"], "60", "8.5", "Unvolved", "media/004.png",);
+    insertPokemon($pokedex, $pokemon);
+
     /**
      * SHOW POKEDEX
      */

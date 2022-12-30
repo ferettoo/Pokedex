@@ -19,7 +19,7 @@ function createPokemon($number, $name, $region, $type, $height, $width, $evoluti
     ];
     return $pokemon;
 }
-//https://www.formget.com/login-form-in-php/ Entender mejor el SESSION
+
 function insertPokemon(&$pokedex, $pokemon)
 {
     $pokemonNumber = $pokemon["number"];
@@ -29,11 +29,13 @@ function insertPokemon(&$pokedex, $pokemon)
     if ($existPokemon === -1) {
         // Si no existe
         array_push($pokedex, $pokemon);
-        $_SESSION['error'] = 'The pokemon was added correctly. . <br>';
+        $message = 'The pokemon was added correctly.';
     } else {
         // Si existe
-        $_SESSION['error'] = 'The pokemon: ' . $pokemonNumber . ' alredy exist.' . '<br>';
+        $error = 'The pokemon: ' . $pokemonNumber . ' alredy exist.' . '<br>';
     }
+    $_SESSION['message'] = $message;
+    $_SESSION['error'] = $error;
 }
 
 function showPokemon($pokemon)
@@ -75,22 +77,27 @@ function searchPokemon($pokedex, $infoPokemon)
     }
     return $position;
 }
+
 function deletePokemon(&$pokedex, $numPokemon)
 {
     $positionDelete = searchPokemon($pokedex, $numPokemon);
     if ($positionDelete != -1) {
         array_splice($pokedex, $positionDelete, 1);
-        $_SESSION['error'] = 'The pokemon was removed correctly.' . '<br>';
+        $message = 'The pokemon was removed correctly.';
     } else {
-        $_SESSION['error'] = 'Pokemon not found' . '<br>';
+        $error = 'Pokemon not found' . '<br>';
     }
+    $_SESSION['message'] = $message;
+    $_SESSION['error'] = $error;
 }
+
 function modifyPokemon(&$pokedex, $number, $name, $region, $type, $height, $width, $evolution, $image)
 {
     $position = searchPokemon($pokedex, $number);
     if ($position != -1) {
         $pokemon = createPokemon($number, $name, $region, $type, $height, $width, $evolution, $image);
         $pokedex[$position] = $pokemon;
+        $_SESSION['message'] = 'The pokemon has been successfully modified.';
     } else {
         echo "Pokemon doesn't exist.";
     }
