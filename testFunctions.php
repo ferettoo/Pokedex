@@ -23,7 +23,7 @@ require("./php_librarys/function.php");
     $pokemon = createPokemon("001", "Bulbasaur", "Kanto", ["Plant", "Poison"], "70", "6.9", "Unvolved", "media/001.png",);
     insertPokemon($pokedex, $pokemon);
 
-    $pokemon = createPokemon("002", "Ivysaur", "Hoen", ["Plant", "Poison"], "100", "13", "First evolution", "media/002.png",);
+    $pokemon = createPokemon("002", "Ivysaur", "Hoen", ["Plant", "Poison"], "100", "13", "First evolution", "media/002.pang",);
     insertPokemon($pokedex, $pokemon);
 
     $pokemon = createPokemon("003", "Charmander", "Jotho", ["Fire"], "60", "8.5", "Unvolved", "media/004.png",);

@@ -259,9 +259,9 @@ $pokemon = $_SESSION['pokemon'];
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <a href=" pokemon_list.php" class="btn btn-secondary me-1">Cancel</a>
+                        <a href=" pokemon_list.php" class="btn btn-secondary me-1">Cancelar</a>
                         <input type="hidden" value="AcceptModify" name="submitModify">
-                        <input type="submit" value="Accept" name="submitForm" class="btn btn-primary">
+                        <input type="submit" value="Aceptar" name="submitForm" class="btn btn-primary">
                     </div>
                 </form>
             </div>
